@@ -6,7 +6,11 @@
       <router-link
         tag="button"
         class="btn btn-warning"
-        :to="{ name: 'userEdit', params: { id: id } }"
+        :to="{
+          name: 'userEdit',
+          params: { id: id },
+          query: { locale: 'EN-US', unique_id: 100 },
+        }"
         >Edit User</router-link
       >
     </div>
