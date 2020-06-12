@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-8 mx-auto mt-4">
         <h1>Routing</h1>
-        <Header></Header>
         <hr />
+        <router-view name="header-top"></router-view>
         <router-view></router-view>
         <hr />
       </div>
@@ -13,13 +13,7 @@
 </template>
 
 <script>
-import Header from './components/Header';
-
-export default {
-  components: {
-    Header,
-  },
-};
+export default {};
 </script>
 
 <style></style>
