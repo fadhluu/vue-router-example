@@ -1,10 +1,30 @@
 /* eslint-disable import/prefer-default-export */
 import Home from './components/Home';
-import User from './components/user/User';
-import UserHome from './components/user/UserHome';
-import UserDetail from './components/user/UserDetail';
-import UserEdit from './components/user/UserEdit';
 import Header from './components/Header';
+
+const User = (resolve) => {
+  require.ensure(['./components/user/User'], () => {
+    resolve(require('./components/user/User'), 'user');
+  });
+};
+
+const UserHome = (resolve) => {
+  require.ensure(['./components/user/UserHome'], () => {
+    resolve(require('./components/user/UserHome'), 'user');
+  });
+};
+
+const UserDetail = (resolve) => {
+  require.ensure(['./components/user/UserDetail'], () => {
+    resolve(require('./components/user/UserDetail'), 'user');
+  });
+};
+
+const UserEdit = (resolve) => {
+  require.ensure(['./components/user/UserEdit'], () => {
+    resolve(require('./components/user/UserEdit'), 'user');
+  });
+};
 
 export const routes = [
   {
